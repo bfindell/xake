@@ -14,6 +14,7 @@ import (
 	"github.com/funny/binary"
 	//	"regexp"
 	"github.com/golang/snappy"
+	"github.com/reiver/go-cast"
 	"os"
 	"strings"
 	"time"
@@ -73,7 +74,8 @@ func DownloadData() error {
 	defer t.Stop()
 
 	var bar *pb.ProgressBar
-	bar = pb.StartNew(int(resp.Size))
+	respSize, err := cast.Int64(resp.Size)
+	bar = pb.StartNew(int(respSize)) 
 	bar.ShowTimeLeft = true
 	bar.SetUnits(pb.U_BYTES)
 	bar.Start()

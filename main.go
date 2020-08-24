@@ -6,7 +6,7 @@ import (
 	prefixed "github.com/kisonecat/logrus-prefixed-formatter"
 	"github.com/sirupsen/logrus"
 	//"github.com/tcnksm/go-latest"
-	"github.com/urfave/cli"
+	"gopkg.in/urfave/cli.v1"
 	"net/url"
 	"os"
 	"sort"
@@ -33,7 +33,7 @@ func main() {
 
 	app.Name = "xake"
 	app.Usage = "a build tool (make) for Ximera"
-	app.Version = "0.9.4"
+	app.Version = "0.9.4.1"
 
 	// Check to see if this is the newest version Humorously,
 	// go-latest depends on go>=1.7 because that was when "context"
