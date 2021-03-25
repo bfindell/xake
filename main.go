@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/fatih/color"
 	prefixed "github.com/kisonecat/logrus-prefixed-formatter"
-	"github.com/sirupsen/logrus"
+	"github.com/Sirupsen/logrus"
 	//"github.com/tcnksm/go-latest"
 //	"github.com/urfave/cli"
 	"gopkg.in/urfave/cli.v1"
